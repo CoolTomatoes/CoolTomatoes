@@ -25,7 +25,11 @@ bin/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+<<<<<<< HEAD
 
+=======
+*.yml
+>>>>>>> 5ca452f747f3b439f974fb31ee421f2e48be8faa
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
