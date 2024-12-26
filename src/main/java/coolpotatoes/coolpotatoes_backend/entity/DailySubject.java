@@ -1,6 +1,7 @@
 package coolpotatoes.coolpotatoes_backend.entity;
 
 import coolpotatoes.coolpotatoes_backend.constants.StudyMethod;
+
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -14,10 +15,12 @@ import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
 
+
 @Entity
 @Getter
 @Setter
 public class DailySubject {
+
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -41,3 +44,4 @@ public class DailySubject {
   private SemesterSubject semesterSub;
 
 }
+

@@ -1,6 +1,7 @@
 package coolpotatoes.coolpotatoes_backend.constants;
 
 public enum AchievementType {
+
   CERTIFICATE("자격증"),
   AWARD("수상경력"),
   BOOTCAMP("부트캠프"),

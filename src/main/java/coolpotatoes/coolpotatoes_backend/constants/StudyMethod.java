@@ -1,6 +1,7 @@
 package coolpotatoes.coolpotatoes_backend.constants;
 
 public enum StudyMethod {
+
   KEYWORD_LISTING("키워드 나열하기"),
   SUMMARIZING("요약하기"),
   FEYNMAN_LEARNING("Feynman 학습법"),
@@ -16,4 +17,5 @@ public enum StudyMethod {
   public String getDescription() {
     return description;
   }
+
 }
