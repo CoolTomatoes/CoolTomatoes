@@ -19,7 +19,7 @@ public class Pet {
 
   private LocalDateTime resetDate;
   private int exp = 0;
-  private int level = 0;
+  private int level = 1;
 
 
 }

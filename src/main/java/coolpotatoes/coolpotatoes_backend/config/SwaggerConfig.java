@@ -14,22 +14,22 @@ public class SwaggerConfig {
 
     @Bean
     public OpenAPI openAPI() {
-//        // SecurityScheme 정의 (Bearer 토큰 방식)
-//        SecurityScheme apiKey = new SecurityScheme()
-//                .type(SecurityScheme.Type.HTTP)
-//                .in(SecurityScheme.In.HEADER)
-//                .name("Authorization")
-//                .scheme("bearer")
-//                .bearerFormat("JWT");
-//
-//        // SecurityRequirement 정의
-//        SecurityRequirement securityRequirement = new SecurityRequirement()
-//                .addList("Bearer Token");
+        // SecurityScheme 정의 (Bearer 토큰 방식)
+        SecurityScheme apiKey = new SecurityScheme()
+                .type(SecurityScheme.Type.HTTP)
+                .in(SecurityScheme.In.HEADER)
+                .name("Authorization")
+                .scheme("bearer")
+                .bearerFormat("JWT");
+
+        // SecurityRequirement 정의
+        SecurityRequirement securityRequirement = new SecurityRequirement()
+                .addList("Bearer Token");
 
         // OpenAPI 정의
         return new OpenAPI()
-//                .components(new Components().addSecuritySchemes("Bearer Token", apiKey))
-//                .addSecurityItem(securityRequirement)
+                .components(new Components().addSecuritySchemes("Bearer Token", apiKey))
+                .addSecurityItem(securityRequirement)
                 .servers(List.of(
                         new io.swagger.v3.oas.models.servers.Server()
                                 .url("http://localhost:8080")
