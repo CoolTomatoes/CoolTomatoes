@@ -43,5 +43,5 @@ public class Member {
   @OneToOne
   @JoinColumn(name = "pet_id")
   private Pet pet;
-  
+
 }

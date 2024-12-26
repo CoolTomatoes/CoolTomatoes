@@ -1,32 +1,40 @@
 package coolpotatoes.coolpotatoes_backend.entity;
 
-import jakarta.persistence.*;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import java.time.LocalDateTime;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
 
 @Entity
 @Getter
 @Setter
 public class SemesterSubject {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int semesterSubId;
 
-    @Column(nullable = false)
-    private String subjectName;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private int semesterSubId;
 
-    private int totalStudySec = 0;
+  @Column(nullable = false)
+  private String subjectName;
 
-    private LocalDateTime createdDate;
+  private int totalStudySec = 0;
 
-    private LocalDateTime lastStudyDate;
+  private LocalDateTime createdDate;
 
-    private float subjectGrade;
+  private LocalDateTime lastStudyDate;
 
-    @ManyToOne
-    private Member member;
+  private float subjectGrade;
+
+  @ManyToOne
+  private Member member;
 
 
 }
+
