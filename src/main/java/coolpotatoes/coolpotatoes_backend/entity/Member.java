@@ -1,5 +1,6 @@
 package coolpotatoes.coolpotatoes_backend.entity;
 
+import coolpotatoes.coolpotatoes_backend.constants.EnrollmentStatus;
 import coolpotatoes.coolpotatoes_backend.constants.LearningType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,11 +22,13 @@ public class Member {
 
   private String studentId;
 
-  private String memberName;
+  private String Name;
 
   private LearningType testType;
 
   private int point;
+
+  private EnrollmentStatus memberStatus = EnrollmentStatus.ENROLLED;
 
   @OneToOne
   @JoinColumn(name = "pet_id")
