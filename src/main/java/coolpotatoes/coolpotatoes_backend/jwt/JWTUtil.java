@@ -68,6 +68,8 @@ public class JWTUtil {
 
         return Jwts.parser().verifyWith(secretKey).build().parseSignedClaims(token).getPayload().get("role", String.class);
     }
+    /* access token 유효시간 */
+    private final long accessTokenValidity = 1000 * 60 * 30; // 30분
 
     public Boolean isExpired(String token) {
 
@@ -75,13 +77,12 @@ public class JWTUtil {
     }
 
 
-    public String createJwt(String username, String role, Long expiredMs) {
-
+    /* AccessToken 발급 */
+    public String createAccessToken(String studentId) {
         return Jwts.builder()
-                .claim("username", username)
-                .claim("role", role)
+                .claim("studentId", studentId)
                 .issuedAt(new Date(System.currentTimeMillis()))
-                .expiration(new Date(System.currentTimeMillis() + expiredMs))
+                .expiration(new Date(System.currentTimeMillis() + accessTokenValidity))
                 .signWith(secretKey)
                 .compact();
     }
