@@ -19,7 +19,7 @@ public class Member {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long memberId;
 
-  private int studentId;
+  private String studentId;
 
   private String memberName;
 
