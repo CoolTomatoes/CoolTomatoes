@@ -6,29 +6,30 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
-import java.time.LocalDateTime;
 import lombok.Getter;
 import lombok.Setter;
+
+
+import java.time.LocalDateTime;
 
 @Entity
 @Getter
 @Setter
-public class received {
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int receivedId;
+public class Received {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long receivedId;
 
-  private String certificateName;
+    private String certificateName;
 
-  private LocalDateTime expiryDate;
+    private LocalDateTime expiryDate;
 
-  private AchievementType achievementType;
+    private AchievementType achievementType;
 
-  private String feeling;
+    private String feeling;
 
-  private LocalDateTime getCertification;
+    private LocalDateTime getCertification;
 
-  @ManyToOne
-  private Member member;
-
+    @ManyToOne
+    private Member member;
 }
